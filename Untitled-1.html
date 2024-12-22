@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视觉滚动效果</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        .section1 {
+        height: 100vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+    .section2 {
+        height: 70vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(7, 158, 222, 0.624);
+        text-align: center;
+    }
+    .section2 {
+        height: 80vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(207, 60, 109, 0.624);
+        text-align: center;
+    }
+
+    #section1 {
+        background-color: #ad89a7;
+        color: rgb(8, 55, 93);
+    }
+    #section11 {
+        background-color: #3f80bd;
+        color: rgb(218, 18, 181);
+    }
+    #section12 {
+        background-color: #33b653;
+        color: rgb(51, 193, 177);
+    }
+
+    #section2 {
+        background-image: url('7b768a2d2e241e9ad53ed52cabd1de4.jpg');
+        background-size: contain;
+        background-attachment: fixed;
+    }
+
+    #section3 {
+        background-image: url('20e09e6ab300267ff22780a923e8ab0.jpg');
+        background-size: contain;
+        background-attachment: fixed;}
+        #section4 {
+        background-image: url('ecdb1102aa331957658b2c10bb57765.jpg');
+        background-size: contain;
+        background-attachment: fixed;}
+        #section5 {
+        background-image: url('f0570ffd0950bf07f15f0cdc9699bac.jpg');
+        background-size: contain;
+        background-attachment: fixed;}
+        #section6 {
+        background-image: url('a059a01422d23ea3c00250208ee9db0.jpg');
+        background-size: contain;
+        background-attachment: fixed;}
+        #section7 {
+        background-image: url('cb9668e2fdd1bb62a89210ca6128128.jpg');
+        background-size: contain;
+        background-attachment: fixed;}    
+        
+    </style>
+</head>
+<body>
+    <section class="section1" id="section1">
+        <h2>欢迎来到小猫世界</h2>
+    </section>
+    <section class="section1" id="section2">
+        <h2>猜猜我是什么猫</h2>
+    </section>
+    <section class="section2" id="section11">
+        <h2>滑动看小猫上阳台</h2>
+    </section>
+    <section class="section1" id="section3">
+        <h2>主人逼我跳楼啦?!</h2>
+    </section>
+    <section class="section2" id="section11">
+        <h2>下面请看小猫跳楼</h2>
+    </section>
+    <section class="section1" id="section4">
+        <h2>骗你的我去睡觉了</h2>
+    </section>
+    <section class="section1" id="section6">
+        <h2>爱睡懒觉</h2>
+    </section>
+    <section class="section1" id="section5">
+        <h2>起床来张美美自拍</h2>
+    </section>
+    <section class="section1" id="section7">
+        <h2>没想到我还有兄弟吧</h2>
+    </section>
+    <section class="section2" id="section11">
+        <h2>对,我主人太懒了就拍这点</h2>
+    </section>
+    <div class="content"></div>
+    <script>
+        var foreground=document.querySelector('.parallax__foreground')
+        function updateForegroundPosition(){
+            var scrolled=window.pageYoffset;
+            var translateValu=scrolled*0.5;
+            foreground.style.transform='translate3d(0,'+translateValue+'px,0)';
+        }
+        window.addEventListener('scroll',function(){
+            requestAnimationFrame(updateForegroundPosition);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* 重置浏览器默认样式 */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+/* 设置基本字体和背景 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* 头部样式 */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s;
+}
+
+/* 导航菜单样式 */
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navigation ul li {
+    margin: 0 1em;
+}
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 通用部分样式 */
+.section {
+    margin: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* 作品集样式 */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio-item {
+    max-width: 30%; /* 根据需要调整 */
+    margin: 1em;
+    border: 1px solid #ddd;
+}
+
+/* 轮播图样式 */
+.carousel {
+    position: relative;
+    max-width: 80%; /* 调整轮播图的最大宽度 */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* 确保图片按比例缩放 */
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* 底部样式 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .portfolio-item {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column;
+    }
+    .navigation ul li {
+        margin: 0.5em 0;
+    }
+    .portfolio-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.2em;
+    }
+    .section {
+        padding: 0.5em;
+    }
+}
